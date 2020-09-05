@@ -40,6 +40,10 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
+### ssh-port
+
+Which SSH port should be used to contact dokku (default: 22).
+
 ## Example
 
 Note: `actions/checkout` must preceed this action in order for the repository data to be exposed for the action.
@@ -57,4 +61,5 @@ steps:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
         dokku-host: 'my-dokku-host.com'
         app-name: 'my-dokku-app'
+        ssh-port: 2223
 ```
